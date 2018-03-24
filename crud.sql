@@ -1,23 +1,25 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.9
--- http://www.phpmyadmin.net
+-- version 4.7.7
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 23, 2015 at 02:13 AM
--- Server version: 5.5.34
--- PHP Version: 5.4.22
+-- Host: localhost
+-- Generation Time: Mar 24, 2018 at 05:41 AM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `crud`
+-- Database: `id5171518_crud`
 --
 
 -- --------------------------------------------------------
@@ -26,22 +28,41 @@ SET time_zone = "+00:00";
 -- Table structure for table `t_member`
 --
 
-CREATE TABLE IF NOT EXISTS `t_member` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `t_member` (
+  `id` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `email` varchar(75) NOT NULL,
-  `hp` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+  `hp` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `t_member`
 --
 
 INSERT INTO `t_member` (`id`, `nama`, `email`, `hp`) VALUES
-(1, 'Matthew Bellamy', 'matt@muse.mu', '06123712311'),
-(2, 'Dominic Howard', 'dom@muse.mu', '06123712322'),
-(3, 'Christopher Wolstenholme ', 'chris@muse.mu', '06123712333');
+(6, 'thumb', 'thumb@thumb', '110'),
+(9, 'Gabriel', 'tenma@heaven.co', '08');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `t_member`
+--
+ALTER TABLE `t_member`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `t_member`
+--
+ALTER TABLE `t_member`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
