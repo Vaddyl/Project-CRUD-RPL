@@ -54,7 +54,7 @@ if(isset($_POST['update']))
 
 	<div class="form-group">
 	<input type="submit" value="Update" name="update" class="btn btn-primary">
-	<a href="rekap.php" class="btn btn-danger">Batal</a>
+	<a href="list.php" class="btn btn-danger">Batal</a>
 	</div>
 
 	</form>
